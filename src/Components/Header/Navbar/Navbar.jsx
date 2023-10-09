@@ -91,7 +91,7 @@ const Navbar = () => {
                         {/* for button/signin sections*/ }
                          <div className="navbar-end pr-[100px]">
                          { user &&<div className="pr-4">
-                                        <h3 className="text-blue-500 text-xl">  {user.displayName} </h3>
+                                        <h3 className="text-blue-500 text-xl">  {user?.displayName} </h3>
                                     </div> }
                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         

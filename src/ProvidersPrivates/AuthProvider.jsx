@@ -5,12 +5,20 @@ import app from "../Firebase/firebase.config";
 
 export const AuthContext = createContext(null);
 
+
 const auth = getAuth( app );
+
 
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
 
     const [loading, setLoading] = useState(true)
+
+    const updatedProfile = (name, photo)=>{
+        updatedProfile(auth.currentUser,{photoURL:photo, displayName:name})
+
+
+    }
 
     const createUser = (email,password) =>{
         setLoading(true);
@@ -47,6 +55,7 @@ const AuthProvider = ({children}) => {
         loading,
         createUser,
         signIn,
+        updatedProfile,
         logOut
 
     }

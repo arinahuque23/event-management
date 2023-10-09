@@ -9,11 +9,11 @@ const Banner = () => {
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+      <h1 className="mb-5 text-5xl hover:text-pink-300 font-bold">Hello <span className="text-orange-400">Guys</span></h1>
+      <p className="mb-5 text-4xl hover:text-green-200">Be Creative With Us</p>
       
       {/*for seacrh input*/}
-      <div className="form-control pl-[100px] pb-4">
+      <div className="form-control pr-8 pl-[50px] pb-4">
           <div className="input-group">
              <input type="text" placeholder="Search…" className="input input-bordered" />
            <button className="btn btn-square">

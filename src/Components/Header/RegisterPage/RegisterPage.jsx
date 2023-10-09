@@ -7,6 +7,7 @@ import { AuthContext } from "../../../ProvidersPrivates/AuthProvider";
 
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../../Firebase/firebase.config";
+import swal from "sweetalert";
 
 
 const RegisterPage = () => {
@@ -14,6 +15,7 @@ const RegisterPage = () => {
     //googlelog
     const auth = getAuth(app);
     const provider = new GoogleAuthProvider();
+    const { createUser,updatedProfile } = useContext(AuthContext);
 
     const handleGoogleSignIn =() =>{
         signInWithPopup(auth, provider)
@@ -28,7 +30,7 @@ const RegisterPage = () => {
     }
 
 
-    const { createUser } = useContext(AuthContext);
+    
     const handleRegister = e =>{
         e.preventDefault();
         console.log(e.currentTarget);
@@ -38,16 +40,26 @@ const RegisterPage = () => {
         const email = form.get('email');
         const password = form.get('password');
         console.log(name,email,password);
+        
+        if(/^(?=.*[A-Z])(?=.*[\W_]).{6,}$/.test(password)){
+            
+            //create userrr
+            createUser(email, password)
+            .then(result =>{
+                console.log(result.user)
+                updatedProfile()
+                .then()
+                .catch()
+            })
+    
+            .catch(error =>{
+                console.log(error)
+            })
+        }
+        else{
+            swal("Error","Your Password Must Be 6 character or longer and have atleast a upercase and a spacial character","error");
+        }
 
-        //create userrr
-        createUser(email, password)
-        .then(result =>{
-            console.log(result.user)
-        })
-
-        .catch(error =>{
-            console.log(error)
-        })
 
     }
 
@@ -86,15 +98,22 @@ const RegisterPage = () => {
                      <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                   </label>
                  </div>
+                 <div className="text-orange-400">
+                    <p>Password must be at least 6 charater in length, </p>
+                    <p>At least 1 special character, </p>
+                    <p> At least 1 number , </p>
+                    <p> At least 1 upper case letter
+                    </p>
+                 </div>
                  <div className="form-control mt-6">
-                    <button className="btn btn-primary">Login</button>
+                    <button className="btn btn-primary">Register</button>
                     </div>
                         </form>
                         {/**for google button */}
                         <div className="">
-                            <p className="text-xl ml-[125px] font-thin  pt-2 ">Or Signup Using  </ p>
+                            <p className="text-xl ml-[125px] font-thin  pt-[100px] ">Or Signup Using  </ p>
 
-                             <button onClick={handleGoogleSignIn} className="btn ml-[141px] mt-2">google </button>
+                             <button onClick={handleGoogleSignIn} className="btn text-blue-500 ml-[141px] mt-2">google </button>
                              <div className="my-2 p-2  pl-[60px]">
                              <p className="pb-8">Already  Have An Account ? <Link className="text-blue-500 underline" to="/login">Login</Link> </p>
                             </div>

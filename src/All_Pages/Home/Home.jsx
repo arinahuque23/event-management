@@ -3,6 +3,7 @@ import AllEventsCard from "../../Components/AllEventsCardsSect/AllEventsCard";
 import Banner from "../../Components/Header/Banner/Banner";
 import Footer from "../../Components/Header/Footer/Footer";
 import TeamMember from "../../Components/Header/ForAosTeam/TeamMember";
+import TestiMonial from "../../Components/TestiMonial/TestiMonial";
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
           <Banner></Banner>
           <AllEventsCard events={events} ></AllEventsCard>
           <TeamMember></TeamMember>
+          <TestiMonial></TestiMonial>
           <Footer></Footer>
         </div>
     );
