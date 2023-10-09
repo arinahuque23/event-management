@@ -45,7 +45,7 @@ const EventsCardDetailsShowPage = ({event}) => {
     return (
         <div  className="mt-[100px] pl-[200px] pr-[200px] mb-[100px]  "  >
            
-           <div className="card lg:card-side bg-base-100 border border-black shadow-xl pl-4" >
+           <div className="card lg:card-side bg-base-100 border border-black shadow-xl pl-4" style={{backgroundImage: 'url(https://i.ibb.co/vcTwW3w/1.jpg)'}}>
   <figure><img className="h-[270px]  mt-4 mb-4 border border-gray-300 w-[600px]" src={picture} alt="Album"/></figure>
   <div className="card-body">
     <h2 className="card-title text-2xl pl-6 ">{title}</h2>
