@@ -18,10 +18,9 @@ console.log(greetign);
 <details><summary><b>B: `ReferenceError: greetign is not defined`</b></summary>
 <p>
 
-#### Answer: <b>  In this code, I've declared a variable called "greeting" with the statement let greeting;. However, I've also inadvertently created a variable called "greetign" without declaring it explicitly with let. This is why  encountering an error where "greeting is not defined" because i never declared "greetign" as a variable. </b>
+#### Answer: ?
 
-
-<i>Write your explanation here</i>
+<i>In youthisr code, i've declared a variable called "greeting" with the statement let greeting;. However, i've also inadvertently created a variable called "greetign" without declaring it explicitly with let. This is why encountering an error where "greeting is not defined" because i never declared "greetign" as a variable.</i>
 
 </p>
 </details>
@@ -46,7 +45,7 @@ sum(1, "2");
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Here, 1 is a number, and "2" is a string. So, the result of calling sum(1, "2"); in this code is actually 3, but it's treated as a string because JavaScript automatically converted the string "2" to a number during the addition. If you want to ensure that the result is treated as a number, you can explicitly convert a and b to numbers within the sum function, as shown in the modified code in my previous response.</i>
 
 </p>
 </details>
@@ -67,12 +66,12 @@ console.log(food);
 - C: `['🍝', '🍕', '🍫', '🥑', '🍔']`
 - D: `ReferenceError`
 
-<details><summary><b>A: `['🍕', '🍫', '🥑', '🍔']`</b></summary>
+<details><summary><b> B: `['🍝', '🍫', '🥑', '🍔']`</b></summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>You have an array food containing four emoji elements: ["🍕", "🍫", "🥑", "🍔"]. the food array using console.log(food);, which will display ['🍝', '🍫', '🥑', '🍔'] because the array itself was not modified; only the favoriteFood property in the info object was updated.</i>
 
 </p>
 </details>
