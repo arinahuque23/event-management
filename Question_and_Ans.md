@@ -18,7 +18,8 @@ console.log(greetign);
 <details><summary><b>B: `ReferenceError: greetign is not defined`</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: <b>  In this code, I've declared a variable called "greeting" with the statement let greeting;. However, I've also inadvertently created a variable called "greetign" without declaring it explicitly with let. This is why  encountering an error where "greeting is not defined" because i never declared "greetign" as a variable. </b>
+
 
 <i>Write your explanation here</i>
 
