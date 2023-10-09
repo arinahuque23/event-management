@@ -96,7 +96,8 @@ console.log(sayHi());
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+
+<i>In the code you provided, you have a function sayHi that expects a name parameter, but when you call it with sayHi(), you haven't provided any argument. This will result in a TypeError because the function expects a value for name.</i>
 
 </p>
 </details>
@@ -124,7 +125,7 @@ console.log(count);
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Inside the forEach callback function, you check if the current num is truthy (i.e., not equal to 0 which is falsy). For the numbers 1, 2, and 3, this condition evaluates to true, so the count variable is incremented by 1 for each of these numbers.</i>
 
 </p>
 </details>
